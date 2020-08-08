@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".view.Giohangsp">
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbarChitietsanpham"
+        app:title="Giỏ hàng"
+        app:titleTextColor="#ffff"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="#FB8C00"/>
+    <ScrollView
+        android:layout_below="@id/toolbarChitietsanpham"
+        android:id="@+id/scrollView"
+        android:layout_width="match_parent"
+        android:layout_height="450dp">
+        <androidx.recyclerview.widget.RecyclerView
+            tools:listitem="@layout/item_giohang"
+            app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/recyclerviewGiohang"/>
+    </ScrollView>
+    <LinearLayout
+        android:layout_below="@id/scrollView"
+        android:gravity="center"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+        <TextView
+            android:textColor="#f20"
+            android:textSize="30sp"
+            android:layout_marginBottom="20dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Tổng tiên"
+            android:id="@+id/tvTongtienspGiohang"/>
+        <Button
+            android:layout_marginBottom="10dp"
+            android:id="@+id/TvThanhtoan"
+            android:background="@drawable/bg_button_shape"
+            android:layout_width="match_parent"
+            android:text="Thanh toán"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:textColor="#ffff"
+            android:layout_height="wrap_content"/>
+        <Button
+            android:layout_marginTop="10dp"
+            android:id="@+id/tvTieptucmuahang"
+            android:background="@drawable/bg_button_shape"
+            android:text="Tiếp tục mua hàng"
+            android:textColor="#ffff"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+    </LinearLayout>
+    <nl.dionsegijn.konfetti.KonfettiView
+        android:id="@+id/konfettiView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"/>
+</RelativeLayout>

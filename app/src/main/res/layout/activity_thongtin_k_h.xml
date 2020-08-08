@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".view.ThongtinKH">
+    <ImageView
+        android:layout_below="@id/tvHeader"
+        android:layout_marginTop="@dimen/_10sdp"
+        android:layout_centerHorizontal="true"
+        android:background="@drawable/person"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+    <TextView
+        android:layout_centerHorizontal="true"
+        android:id="@+id/tvHeader"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Thông tin khách hàng"
+        android:textColor="#FFB300"
+        android:textSize="@dimen/_25ssp"
+        android:layout_marginTop="@dimen/_20sdp"
+        android:layout_marginLeft="@dimen/_15sdp"/>
+    <LinearLayout
+        android:id="@+id/linear1"
+        android:background="@drawable/bg_shape3"
+        android:layout_centerInParent="true"
+        android:layout_width="@dimen/_230sdp"
+        android:layout_height="@dimen/_340sdp"
+        android:orientation="vertical">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Tên khách hàng"
+            android:textColor="#FFB300"
+            android:textStyle="bold"
+            android:textSize="@dimen/_15ssp"
+            android:layout_marginTop="@dimen/_20sdp"
+            android:layout_marginLeft="@dimen/_15sdp"/>
+        <EditText
+            android:maxLines="1"
+            android:id="@+id/edtTenKh"
+            android:imeOptions="actionNext"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/_10ssp"
+            android:layout_marginRight="@dimen/_10sdp"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Địa chỉ"
+            android:textColor="#FFB300"
+            android:textStyle="bold"
+            android:textSize="@dimen/_15ssp"
+            android:layout_marginTop="@dimen/_20sdp"
+            android:layout_marginLeft="@dimen/_15sdp"/>
+        <EditText
+            android:imeOptions="actionNext"
+
+            android:maxLines="1"
+            android:id="@+id/edtDiachi"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/_10ssp"
+            android:layout_marginRight="@dimen/_10sdp"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Số điện thoại"
+            android:textColor="#FFB300"
+            android:textStyle="bold"
+            android:textSize="@dimen/_15ssp"
+            android:layout_marginTop="@dimen/_20sdp"
+            android:layout_marginLeft="@dimen/_15sdp"/>
+        <EditText
+            android:maxLines="1"
+            android:imeOptions="actionNext"
+
+            android:id="@+id/edtSodt"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/_10ssp"
+            android:layout_marginEnd="@dimen/_10sdp"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Email"
+            android:textColor="#FFB300"
+            android:textStyle="bold"
+            android:textSize="@dimen/_15ssp"
+            android:layout_marginTop="@dimen/_20sdp"
+            android:layout_marginStart="@dimen/_15sdp"/>
+        <EditText
+            android:maxLines="1"
+            android:imeOptions="actionDone"
+
+            android:id="@+id/edtEmail"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/_10ssp"
+            android:layout_marginEnd="@dimen/_10sdp"/>
+    </LinearLayout>
+    <Button
+        android:id="@+id/btnTienHanhdathang"
+        android:layout_width="@dimen/_180sdp"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_alignParentBottom="true"
+        android:text="Tiến hành đặt hàng"
+        android:background="@drawable/bg_button_shape"
+        android:textColor="#ffff"
+        android:layout_marginBottom="@dimen/_80sdp"/>
+
+
+    <ImageView
+        android:background="@drawable/bg_shape4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="@dimen/_60sdp"
+        android:layout_marginStart="-70dp"
+        android:alpha="0.4"/>
+    <ImageView
+        android:background="@drawable/bg_shape4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="@dimen/_100sdp"
+        android:layout_marginEnd="-70dp"
+        android:layout_alignParentEnd="true"
+        android:alpha="0.4"/>
+    <nl.dionsegijn.konfetti.KonfettiView
+        android:id="@+id/konfettiView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"/>
+</RelativeLayout>
